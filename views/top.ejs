@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>to-doリスト</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <h1>TO-DO-List</h1>
+        <p>sample</p>
+      </div>
+      <div class="information">
+        <div class="date_info">
+          <% const today = new Date(); %>
+          <%= today.getFullYear() + "/"; %>
+          <%= today.getMonth()+1 + "/"; %>
+          <%= today.getDate() + "/"; %>
+          <%= today.getHours() + " :"; %>
+          <%= today.getMinutes(); %>
+        </div>
+        <div class="creator">
+          <p>presented by R.K.</p>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div class="create">
+        <form action="/new" method="get">
+          <input type="submit" value="新規タスクの生成">
+        </form>
+      </div>
+      <div class="chart">
+        <ul>
+          <% contents.forEach((task) => { %>
+            <li>
+              <div class="item_data">
+                <input type="checkbox">
+                <span><%= task.content %></span>
+                <div class="delete_info">
+                  <form action="/delete/<%= task.id %>" method="post">
+                    <input type="submit" value="削除">
+                  </form>
+                </div>
+                <div class="edit_info">
+                  <form action="/edit/<%= task.id %>" method="post">
+                    <input type="submit" value="編集">
+                  </form>
+                </div>
+              </div>
+            </li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

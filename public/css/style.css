@@ -1,0 +1,44 @@
+header{
+  font-family: "Lucida Grande";
+  height: 60px;
+  padding: 20px;
+}
+
+.information{
+  color: #808080;
+  float: right;
+}
+
+.title{
+  color: black;
+  text-align: center;
+  border-bottom: 1px solid #808080;
+}
+
+.creator{
+  display: block;
+  padding-left: 10px;
+}
+
+li{
+  list-style: none;
+}
+
+.create{
+  padding-left: 40px;
+  margin-top: 50px;
+}
+
+.delete_info{
+  padding-left: 100px;
+  display: inline-block;
+}
+
+.edit_info{
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.item_data{
+  margin: 10px;
+}
