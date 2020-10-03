@@ -1,3 +1,3 @@
 # to_do_list
 
-JavaScriptの練習のためにTo-Doリストを作ってみた
+JavaScriptの練習のためにTo-Doリストを作ってみた.  
